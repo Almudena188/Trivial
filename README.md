@@ -3,7 +3,7 @@
   Contestar correctamente las 10 preguntas.
   Cada preunta será de una temática distinta. 
   
-# 🚀TEMÁTICAS
+# 🚀 TEMÁTICAS
  * Geografía (Azul)
  * Arte y Literatura (Morado)
  * Historia (Amarillo)
@@ -11,5 +11,5 @@
  * Ciencias y Naturaleza (Verde)
  * Deportes y Pasatiempos (Naranja)
  
-# Autor ✒️
+# ✒️ Autor 
 Almudena Delgado Moscoso
