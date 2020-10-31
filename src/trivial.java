@@ -252,7 +252,7 @@ public class trivial {
 				JOptionPane.showMessageDialog(null, "OPCIÓN NO CORRECTA", "ERROR", JOptionPane.ERROR_MESSAGE);
 			}
 		}
-
+		gris();
 		JOptionPane.showMessageDialog(null, "TRIVIAL TERMINADO\n" + "Sus puntos obtenidos son: " + contPuntos + " de " + numPreg + " preguntas" , "FIN",
 				JOptionPane.QUESTION_MESSAGE);
 	}
