@@ -6,14 +6,14 @@ import javax.swing.UIManager;
 public class trivial {
 
 	public static void main(String[] args) {
-		
+
 		int contPuntos = 0;
 		int numPreg = 0;
 		String srt;
 		String respuesta;
 
 		// PRIMERA PREGUNTA
-		 amarillo();
+		amarillo();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE HISTORIA:\n"
 				+ "¿ Quién fue el primer presidente de la democracia española tras el franquismo?");
 		respuesta = srt;
@@ -253,48 +253,49 @@ public class trivial {
 			}
 		}
 		gris();
-		JOptionPane.showMessageDialog(null, "TRIVIAL TERMINADO\n" + "Sus puntos obtenidos son: " + contPuntos + " de " + numPreg + " preguntas" , "FIN",
-				JOptionPane.QUESTION_MESSAGE);
+		JOptionPane.showMessageDialog(null,
+				"TRIVIAL TERMINADO\n" + "Sus puntos obtenidos son: " + contPuntos + " de " + numPreg + " preguntas",
+				"FIN", JOptionPane.QUESTION_MESSAGE);
 	}
-	
-	//METODOS PARA PONER EL COLOR
+
+	// METODOS PARA PONER EL COLOR
 	public static void azul() {
 		UIManager UI = new UIManager();
 		Object azul = UI.put("OptionPane.background", Color.cyan);
-		 UI.put("Panel.background", Color.cyan);
+		UI.put("Panel.background", Color.cyan);
 	}
-	
+
 	public static void rosa() {
 		UIManager UI = new UIManager();
 		Object rosa = UI.put("OptionPane.background", Color.pink);
-		 UI.put("Panel.background", Color.pink);
+		UI.put("Panel.background", Color.pink);
 	}
-	
-	public static void amarillo () {
+
+	public static void amarillo() {
 		UIManager UI = new UIManager();
 		Object amarillo = UI.put("OptionPane.background", Color.yellow);
-		 UI.put("Panel.background", Color.yellow);
+		UI.put("Panel.background", Color.yellow);
 	}
-	
-	public static void rojo () {
+
+	public static void rojo() {
 		UIManager UI = new UIManager();
 		Object rojo = UI.put("OptionPane.background", Color.red);
-		 UI.put("Panel.background", Color.red);
+		UI.put("Panel.background", Color.red);
 	}
-	
-	public static void verde () {
+
+	public static void verde() {
 		UIManager UI = new UIManager();
 		Object verde = UI.put("OptionPane.background", Color.green);
-		 UI.put("Panel.background", Color.green);
+		UI.put("Panel.background", Color.green);
 	}
-	
-	public static void naranja () {
+
+	public static void naranja() {
 		UIManager UI = new UIManager();
 		Object naranja = UI.put("OptionPane.background", Color.orange);
-		 UI.put("Panel.background", Color.orange);
+		UI.put("Panel.background", Color.orange);
 	}
-	
-	public static void gris () {
+
+	public static void gris() {
 		UIManager UI = new UIManager();
 		Object magenta = UI.put("OptionPane.background", Color.lightGray);
 		UI.put("Panel.background", Color.lightGray);
