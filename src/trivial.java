@@ -1,19 +1,19 @@
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class trivial {
 
 	public static void main(String[] args) {
-		// CONTADOR PUNTOS
-		// MENSAJE ACIERTO/ERROR POR PREGUNTA
-		// MENSAJE FINAL PUNTOS
-		// MINIMO 10 PREGUNTAS (MISMA TEMÁTICA)
-
+		
 		int contPuntos = 0;
 		int numPreg = 0;
 		String srt;
 		String respuesta;
 
 		// PRIMERA PREGUNTA
+		 amarillo();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE HISTORIA:\n"
 				+ "¿ Quién fue el primer presidente de la democracia española tras el franquismo?");
 		respuesta = srt;
@@ -32,6 +32,7 @@ public class trivial {
 		}
 
 		// SEGUNDA PREGUNTA
+		azul();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE GEOGRAFÍA:\n" + "¿Cuál es la capital de Brasil?");
 		respuesta = srt;
 		numPreg++;
@@ -48,6 +49,7 @@ public class trivial {
 		}
 
 		// TERCERA PREGUNTA
+		rosa();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE ARTE Y LITERATURA:\n"
 				+ "¿Qué gran artista es conocido por haber pintado la Capilla Sixtina?");
 		respuesta = srt;
@@ -65,6 +67,7 @@ public class trivial {
 		}
 
 		// CUARTA PREGUNTA
+		rojo();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE ENTRETENIMIENTO:\n"
 				+ "¿Cómo se llama la madre de Simba en la película de Disney “El Rey León”? ");
 		respuesta = srt;
@@ -81,6 +84,7 @@ public class trivial {
 					JOptionPane.ERROR_MESSAGE);
 		}
 		// QUINTA PREGUNTA
+		verde();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE NATURALEZA Y CIENCIA:\n"
 				+ "¿Cómo se llama la planta a partir de la cual suele ser elaborado el tequila?");
 		respuesta = srt;
@@ -97,6 +101,7 @@ public class trivial {
 					JOptionPane.ERROR_MESSAGE);
 		}
 		// SEXTA PREGUNTA
+		naranja();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE DEPORTE Y PASATIEMPOS:\n"
 				+ "¿Qué arte marcial de origen sudamericano fue desarrollado para parecerse a un baile?");
 		respuesta = srt;
@@ -115,8 +120,8 @@ public class trivial {
 
 		// como solo existen 6 categorias le damos paso al usario para que elija las
 		// preguntas siguientes hasta que se hagan 10 preguntas en total
-
-		for (; numPreg <= 10; numPreg++) {
+		gris();
+		for (; numPreg < 10; numPreg++) {
 			int categoria;
 			// pido la opción
 			srt = JOptionPane.showInputDialog("Elija la categoría siguiente" + "\n 1: HISTORIA"
@@ -126,6 +131,7 @@ public class trivial {
 			// comparamos la opción
 			switch (categoria) {
 			case 1: {
+				amarillo();
 				srt = JOptionPane.showInputDialog(
 						"CATEGORIA DE HISTORIA:\n" + "¿En qué año el hombre pisó la Luna por primera vez?");
 				respuesta = srt;
@@ -145,6 +151,7 @@ public class trivial {
 			}
 
 			case 2: {
+				naranja();
 				srt = JOptionPane.showInputDialog("CATEGORIA DE DEPORTE Y PASATIEMPOS:\n"
 						+ "¿Quién es considerado el mejor jugador de baloncesto de todos los tiempos?");
 				respuesta = srt;
@@ -164,11 +171,12 @@ public class trivial {
 			}
 
 			case 3: {
+				verde();
 				srt = JOptionPane
 						.showInputDialog("CATEGORIA DE NATURALEZA Y CIENCIA:\n" + "¿Cuál es la velocidad de la luz?");
 				respuesta = srt;
 
-				if (respuesta.equalsIgnoreCase("300.000.000 km/s") == true) {
+				if (respuesta.equalsIgnoreCase("300000000 km/s") == true) {
 
 					contPuntos++;
 					JOptionPane.showMessageDialog(null, "Respuesta correcta.\nTus puntos son: " + contPuntos, "BIEN!",
@@ -183,6 +191,7 @@ public class trivial {
 			}
 
 			case 4: {
+				rojo();
 				srt = JOptionPane.showInputDialog(
 						"CATEGORIA DE ENTRETENIMIENTO:\n" + "¿A quién interpretaba John Travolta en “Grease”?");
 				respuesta = srt;
@@ -202,6 +211,7 @@ public class trivial {
 			}
 
 			case 5: {
+				rosa();
 				srt = JOptionPane.showInputDialog("CATEGORIA DE ARTE Y LITERATURA:\n" + "¿Quién pintó el “Guernica”?");
 				respuesta = srt;
 
@@ -220,6 +230,7 @@ public class trivial {
 			}
 
 			case 6: {
+				azul();
 				srt = JOptionPane
 						.showInputDialog("CATEGORIA DE GEOGRAFÍA:\n" + "¿Cuál es el río más caudaloso del mundo?");
 				respuesta = srt;
@@ -242,7 +253,50 @@ public class trivial {
 			}
 		}
 
-		JOptionPane.showMessageDialog(null, "TRIVIAL TERMINADO\n" + "Sus puntos obtenidos son: " + contPuntos, "FIN",
+		JOptionPane.showMessageDialog(null, "TRIVIAL TERMINADO\n" + "Sus puntos obtenidos son: " + contPuntos + " de " + numPreg + " preguntas" , "FIN",
 				JOptionPane.QUESTION_MESSAGE);
+	}
+	
+	//METODOS PARA PONER EL COLOR
+	public static void azul() {
+		UIManager UI = new UIManager();
+		Object azul = UI.put("OptionPane.background", Color.cyan);
+		 UI.put("Panel.background", Color.cyan);
+	}
+	
+	public static void rosa() {
+		UIManager UI = new UIManager();
+		Object rosa = UI.put("OptionPane.background", Color.pink);
+		 UI.put("Panel.background", Color.pink);
+	}
+	
+	public static void amarillo () {
+		UIManager UI = new UIManager();
+		Object amarillo = UI.put("OptionPane.background", Color.yellow);
+		 UI.put("Panel.background", Color.yellow);
+	}
+	
+	public static void rojo () {
+		UIManager UI = new UIManager();
+		Object rojo = UI.put("OptionPane.background", Color.red);
+		 UI.put("Panel.background", Color.red);
+	}
+	
+	public static void verde () {
+		UIManager UI = new UIManager();
+		Object verde = UI.put("OptionPane.background", Color.green);
+		 UI.put("Panel.background", Color.green);
+	}
+	
+	public static void naranja () {
+		UIManager UI = new UIManager();
+		Object naranja = UI.put("OptionPane.background", Color.orange);
+		 UI.put("Panel.background", Color.orange);
+	}
+	
+	public static void gris () {
+		UIManager UI = new UIManager();
+		Object magenta = UI.put("OptionPane.background", Color.lightGray);
+		UI.put("Panel.background", Color.lightGray);
 	}
 }
