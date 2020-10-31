@@ -5,7 +5,7 @@
   
 # 🚀 TEMÁTICAS
  * Geografía (Azul)
- * Arte y Literatura (Morado)
+ * Arte y Literatura (Rosa)
  * Historia (Amarillo)
  * Entretenimiento (Rojo)
  * Ciencias y Naturaleza (Verde)
