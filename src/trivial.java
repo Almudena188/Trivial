@@ -131,10 +131,11 @@ public class trivial {
 
 		// como solo existen 6 categorias le damos paso al usario para que elija las
 		// preguntas siguientes hasta que se hagan 10 preguntas en total
-		gris();
+		
 		for (; numPreg < 10; numPreg++) {
 			int categoria;
 			// pido la opción
+			gris();
 			srt = JOptionPane.showInputDialog("Elija la categoría siguiente" + "\n 1: HISTORIA"
 					+ "\n 2: DEPORTE Y PASATIEMPOS" + "\n 3: NATURALEZA Y CIENCIA" + "\n 4: ENTRETENIMIENTO"
 					+ "\n 5: ARTE Y LITERATURA" + "\n 6: GEOGRAFÍA");
