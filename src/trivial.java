@@ -6,6 +6,16 @@ import javax.swing.UIManager;
 public class trivial {
 
 	public static void main(String[] args) {
+		
+		/**
+		 * historia -> amarillo
+		 * geografia -> azul
+		 * arte y literatura -> rosa
+		 * entretenimiento -> rojo
+		 * ciencias y naturaleza -> verde
+		 * deportes -> naranja
+		 */
+		
 
 		int contPuntos = 0;
 		int numPreg = 0;
@@ -13,6 +23,7 @@ public class trivial {
 		String respuesta;
 
 		// PRIMERA PREGUNTA
+		
 		amarillo();
 		srt = JOptionPane.showInputDialog("CATEGORIA DE HISTORIA:\n"
 				+ "¿ Quién fue el primer presidente de la democracia española tras el franquismo?");
